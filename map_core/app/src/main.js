@@ -189,6 +189,9 @@ main = function()  {
 			} else {
 				createFlatmap("Human", "NCBITaxon:9606");
 			}
+			if (firstVisit() === null){
+				startTutorial()
+			}
 		}
 	}
 
@@ -201,7 +204,17 @@ main = function()  {
 		initialiseMain();
 		document.getElementById("fullscreen-button").onclick = fullscreenToggle;
 		resizeMAPDrawingArea();
-	}	
+	}
+	
+	var firstVisit = function(){
+		return localStorage.getItem('hasVisitedMaps');
+	}
+
+	var startTutorial = function(){
+		var tutorial = require('./tutorial').tutorial;
+		tutorial.startTutorial('mapcore_tutorial');
+		localStorage.setItem('hasVisitedMaps',true);
+	}
 
 	initialise();
 

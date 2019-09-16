@@ -26,6 +26,8 @@
     "broadcast-channel": "^2.1.12",
     "fdikbquery": "^0.1.5",
     "mapcoreintegratedwebapp": "^0.2.5",
+    "chariot-tooltips": "^1.0.0",
+    "jquery": "^3.4.1",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.2.3"
   }
